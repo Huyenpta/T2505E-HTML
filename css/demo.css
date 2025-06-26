@@ -7,16 +7,19 @@ p{
     font-size: 15px;
     line-height: 1.5;/*cách dòng*/
     text-align: justify;/*left center right justify*/
-    font-family: Arial, Helvetica, sans-serif;/*font chữ*/
-    font-weight: 700; /*Độ béo gầy thin 100; extra-thin:200; 
+    /*font-family: Arial, Helvetica, sans-serif;/*font chữ*/
+    /*font-weight: 700; /*Độ béo gầy thin 100; extra-thin:200; 
     light - 300; nomal - 400; medium-500; semi-bold-600; bold-700; extra-bold-800; black-900*/
     text-decoration: underline;/*underline line-through overline*/
     text-transform: none;/*uppercase Viết hoa lowercase viết thường capitalize_chữ cái đầu viết hoa; none*/
     width: 600px;
-    font-style: italic;
+    /*font-style: italic;*/
     word-spacing: 0.5px;/*Giãn chữ*/
     background-color: aquamarine;
     border-bottom: 2px solid yellowgreen;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 a{
