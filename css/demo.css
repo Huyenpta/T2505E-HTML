@@ -1,7 +1,9 @@
 h1{
     color: red;
 }
-
+h2{
+    color: red;
+}
 p{
     color: #cc9a0f;
     font-size: 15px;
@@ -26,8 +28,7 @@ a{
     color: cyan;
     text-decoration: none; /*làm mất gạch chân*/
 }
-body{
+/*body{
     background-color: burlywood;
     background-image: url("../images/TN.webp");
-    background-size: cover; /*Hiển thị ảnh không bị lặp lại*/
-}
+    background-size: cover; /*Hiển thị ảnh không bị lặp lại}*/
