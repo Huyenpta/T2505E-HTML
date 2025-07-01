@@ -1,0 +1,10 @@
+img{
+    max-width: 100%;
+}
+
+div{
+    width: calc(50% - 30px);
+    float: left;
+
+}
+
