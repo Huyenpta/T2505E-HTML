@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Dell\Downloads\FT25E\BTVN9_HTML\css\layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="section header">
+        <div class="container">
+            <h1>Header</h1>
+        </div>
+        <link rel="stylesheet" href="C:\Users\Dell\Downloads\FT25E\BTVN9_HTML\css\form.css">
+    </header>
+    <nav class="section nav">
+        <div class="container">
+            <h2>Navigator</h2>
+        </div>
+    </nav>
+    <main class="section main">
+        <div class="container three-columns">
+            <aside class="a-left">
+                <h2>Aside left</h2>
+            </aside>
+            <section class="content">
+                <h2>Form demo</h2>
+                <!--Form demo-->
+                <form method="get" action="#">
+                    <!-- Method Chỉ có get và post: Phương thức để gửi món quà; action là địa chỉ gửi quà-->
+                    <div class="form_group">
+                        <label for="name">Name </label>
+                        <input type="text" name="full_name" placeholder="Enter your fullname" required/>
+                    </div>
+                    <div class="form_group">
+                        <label for="email">Email </label>
+                        <input type="email" name="email" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="form_group">
+                        <label for="telephone">Telephone </label>
+                        <input type="tel" name="telephone" placeholder="Enter your telephone number" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="dob">Date of Birth </label>
+                        <input type="date" name="dob">
+                    </div>
+                    <div class="form_group">
+                        <label for="password">Password </label>
+                        <input type="password" name="password" placeholder="Enter your password" required/>
+                    </div>
+                    <div class="form_group">
+                        <label for="gender">Gender </label>
+                        <input type="radio" name="gender" value="male" />Male
+                        <input type="radio" name="gender" value="female" />Female
+                    </div>
+                    <div class="form_group">
+                        <label for="weight">Weight</label>
+                        <input type="number" name="weight" placeholder="Enter your weight in kg">
+                    </div>
+                    <div class="form_group">
+                        <label for="avata">Avata</label>
+                        <input type="file" name="avata">
+                    </div>
+                    <div class="form_group">
+                        <label for="my_color">My color</label>
+                        <input type="color" name="my_color">
+                    </div>
+                    <div class="form_group">
+                        <label for="my_time">My time</label>
+                        <input type="time" name="my_time">
+                    </div>
+                    <div class="form_group">
+                        <input type="checkbox" name="terms" value="agree" id="terms" />
+                        <label for="terms">I agree to the terms and conditions.</label>
+                    </div>
+                    <div class="form_group">
+                        <label for="city">City:</label>
+                        <Select name="city">
+                            <option value="hanoi">Hà Nội</option>
+                            <option value="hcm">TP Hồ Chí Minh</option>
+                            <option value="danang">Đà Nẵng</option>
+
+                        </Select>
+                    </div>
+                    <div class="form_group">
+                        <label for="address">Address: </label>
+                        <textarea name="address" rows="5" placeholder="Enter your address here"></textarea>
+                    </div>
+                    <div class="form_group">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        <button type="button">Button</button>
+                    </div>
+                </form>
+        </div>
+        </section>
+        <aside class="a-right">
+            <h2>Aside right</h2>
+        </aside>
+        </div>
+    </main>
+    <footer class="section footer">
+        <div class="container">
+            <h2>Footer</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

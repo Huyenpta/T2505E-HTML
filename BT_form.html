@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<body>
+    <header class="section header">
+        <div class="container">
+            <h1 class="logo">BONOBOS</h1>
+            <div class="step-wrapper">
+                <div class="step">
+                    <div class="circle">1</div>
+                    <p>Shipping</p>
+                </div>
+                <div class="line"></div>
+                <div class="step">
+                    <div class="circle">2</div>
+                    <p>Billing</p>
+                </div>
+                <div class="line"></div>
+                <div class="step">
+                    <div class="circle">3</div>
+                    <p>Review</p>
+                </div>
+            </div>
+            <link rel="stylesheet" href="css/BT_form.css">
+        </div>
+    </header>
+    <nav class="section nav">
+        <div class="container">
+            <br />
+        </div>
+    </nav>
+    <main class="section main">
+        <div class="container three-columns">
+            <section class="content">
+                <h2>Shipping Address</h2>
+                <div class="form_group_row">
+                    <div class="form_group">
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name*" required />
+                        <label for="first_name">First Name is required</label>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name*" required />
+                        <label for="last_name">Last Name is required</label>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="address_line1">Address Line 1*</label>
+                    <input type="text" name="address_line1" id="address_line1" required />
+                </div>
+                <div class="form_group">
+                    <input type="text" name="address_line2" id="address_line2" placeholder="Address Line 2" />
+                </div>
+                <div class="form_group_row">
+                    <div class="form_group">
+                            <select name="country" id="country" required>
+                            <option value="us">United States</option>
+                            <option value="vn">Vietnam</option>
+                            <option value="es">Spain</option>
+                            <option value="cn">China</option>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" name="city" id="city" placeholder="City*" required />
+                    </div>
+                </div>
+                <div class="form_group_row">
+                    <div class="form_group">
+                        <select name="state" id="state">
+                            <option value="" selected>State*</option>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" name="zip" id="zip" placeholder="Zip*" required />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="phonenumber">Phone Number*</label>
+                    <input type="tel" name="phonenumber" id="phonenumber" placeholder="In case questions arise"
+                        required />
+                </div>
+                <div class="form_group">
+                    <input type="checkbox" name="make1" value="agree" id="make1">
+                    <label for="make1">Make Default</label>
+                </div>
+                <div class="form_group">
+                    <button type="submit">Continue To Billing Information</button>
+                </div>
+            </section>
+            <aside class="a-right">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <p class="order-id">#312243643</p>
+                    <div class="summary-line">
+                        <span>Items</span>
+                        <span>1</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span>$68.00</span>
+                    </div>
+                </div>
+
+                <!-- Order Details -->
+                <div class="order-details">
+                    <h2>Order Details</h2>
+                    <div class="product">
+                        <img src="images/ao1.webp" alt="T-Shirt" />
+                        <div class="product-info">
+                            <div class="top-row">
+                                <p class="product-title">T-Shirt Button-Down</p>
+                                <span class="remove">×</span>
+                            </div>
+                            <p class="product-desc">Reg*XL in Black, Tailored</p>
+                            <input type="text" value="Qty 1" />
+                            <p class="product-price">$68.00</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="section footer">
+        <div class="container">
+            <h2>Footer</h2>
+        </div>
+    </footer>
+</body>
+
+</html>
