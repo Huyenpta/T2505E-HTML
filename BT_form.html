@@ -55,15 +55,16 @@
                         <label for="last_name">Last Name is required</label>
                     </div>
                 </div>
-                <div class="form_group">
-                    <label for="address_line1">Address Line 1*</label>
+                <div class="form_group form-floating">
                     <input type="text" name="address_line1" id="address_line1" required />
+                    <label for="address_line1">Address Line 1*</label>
                 </div>
                 <div class="form_group">
                     <input type="text" name="address_line2" id="address_line2" placeholder="Address Line 2" />
                 </div>
                 <div class="form_group_row">
-                    <div class="form_group">
+                    <div class="form_group" form-floating>
+                        <label for="country">Country</label>
                             <select name="country" id="country" required>
                             <option value="us">United States</option>
                             <option value="vn">Vietnam</option>
