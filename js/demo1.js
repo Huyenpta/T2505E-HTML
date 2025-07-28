@@ -112,7 +112,7 @@ if(confirm("Cam đoan bạn đã đủ 18 tuổi?")){
     alert("Vui lòng thoát khỏi website và chờ đủ tuổi.");
 }
 
-var r = Math.random; //return number->double/loat 0->1: vd: 0.12729
+var r = Math.random(); //return number->double/loat 0->1: vd: 0.12729
 r =r * 100;//12.7291
 r=parseInt(r); //12
 //Tạo một số ngẫu nhiên từ 0->99 (<100)

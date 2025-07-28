@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //core is here
+        function lucky_number(){
+            var lk=parseInt(Math.random()*100);//một số ngẫu nhiên từ 0 đến 99
+            console.log(lk);
+            //Cho người chơi dự đoán con số
+            var n=prompt("Nhập số mà bạn dự đoán:");
+            n=parseInt(n);
+            //Người chơi đặt số tiền muốn cược
+            var m=prompt("Số tiền bạn muốn đặt cược:");
+            m= parseInt(m);
+            if(n==lk){
+                m=m*70;
+                alert("Chúc mừng bạn đã thắng cuộc số tiền thu về lượt chơi này: "+m);
+            }else{
+                alert("Chúc bạn may mắn lần sau");
+            }
+        }
+    lucky_number();
+    </script>
+    
+</body>
+</html>

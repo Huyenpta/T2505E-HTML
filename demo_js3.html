@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="head1" class="xyz">Demo JS Effect</h1><!-- trong 1 giao diện ID là duy nhất-->
+    <h2><span id="min">10</span>:<span id="sec">00</span></h2>
+    <script type="text/javascript">
+        setTimeout(function () {
+            var h = document.getElementById("head1"); // h là hình chiếu của h1, nếu làm gì với h thì h1 cũng sẽ bị ảnh hưởng
+            //h.innerText="Đây là nội dung đã bị thay đổi";
+            //h.innerHTML="<i>Đây là nội dung đã bị in nghiêng</i>";
+            h.style.color = "deeppink";
+            h.style.fontSize = "50px";
+            h.classList.add("demo");// Thêm class dùng cho mấy cái menu sổ các mục con
+            h.classList.remove("xyz");//Xoá class
+        }, 5000)
+
+        // var minutes = document.getElementById("min");
+        // var second = document.getElementById("sec");
+        // var m=parseInt(minutes.innerText);
+        // var s=parseInt(second.innerText)
+        // var time = setInterval(function () {
+        //     s--;
+        //     if (s < 0) {
+        //         m--;
+        //         s = 59;
+        //     }
+        //     if (m==0 && s==0) {
+        //         clearInterval(time);
+        //     }
+        //     minutes.innerText = m < 10 ? "0" + m : m;
+        //     second.innerText = s < 10 ? "0" + s : s;
+        // }, 100);
+        var m = 10;
+        var s = 0;
+        var time = setInterval(function () {
+            console.log(m + ":" + s);
+            var min=document.getElementById("min");
+            var sec=document.getElementById("sec");
+            min.innerText=m>=10?m:"0"+m;
+            sec.innerText=s>=10?s:"0"+s;
+            s--;
+            if (s < 0) {
+                m--;
+                s = 59;
+            }
+            if (m < 0) {
+                clearInterval(time);
+            }
+        }, 10);
+
+    </script>
+</body>
+
+</html>
