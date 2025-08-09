@@ -1,0 +1,30 @@
+ul{
+    text-decoration: none;
+    list-style-type:none
+    
+}
+li{
+    float: left;
+    padding: 20px;
+}
+li .submenu{
+    float: none;
+}
+
+.item .submenu{
+    display: none;
+}
+
+.item a{
+    text-decoration: none;
+}
+
+.item :hover{
+    background-color: blue;
+    color: aliceblue;
+    padding: 15px;
+}
+
+.item.active .submenu{
+    display: block;
+}
