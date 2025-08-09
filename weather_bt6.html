@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+    <style>
+	body {
+    		margin: 0;
+    		font-family: 'Roboto Condensed', sans-serif;
+    		background-color: #222; /* Nền đen */
+    		color: #fff; /* Chữ trắng */
+	}
+
+	.weather-section {
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		height: 100vh;
+	}
+
+	.weather-container {
+    		text-align: center;
+	}
+
+	input#city {
+    		padding: 10px;
+    		width: 300px;
+    		font-size: 18px;
+    		border: none;
+    		border-radius: 8px;
+    		margin-bottom: 20px;
+	}
+
+	.weather-content {
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		gap: 20px;
+	}
+
+	.weather-content img {
+    		width: 100px;
+    		height: 100px;
+	}
+
+	.weather-content h2 {
+    		font-size: 64px;
+    		margin: 0;
+    		font-weight: 400;
+	}
+
+	.weather-details {
+    		text-align: left;
+    		font-size: 18px;
+	}
+    </style>
+    <main class="weather-section">
+        <div class="weather-container">
+            <input type="text" id="city" placeholder="Nhập tên thành phố" onkeypress="searchWeather(event)" />
+            <div class="weather-content">
+	    	<img src="https://openweathermap.org/img/wn/02d@2x.png" id="icon" class="t"/>
+            	<h2 class="t"><span id="temp">33</span><sup><sup>o</sup>C | <sup>o</sup>F<sup></h2>
+	    	<div class="weather-details">
+            		<p>Precipitation: <span id="prec">0</span>%</p>
+            		<p>Humidity: <span id="humd">65</span>%</p>
+            		<p>Wind: <span id="wind">13</span> km/h</p>
+	    	</div>
+	    </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        function searchWeather(){
+            if(event.keyCode == 13){ // sự kiện bàn phím nhấn là phím enter 
+                var ip = document.getElementById("city");
+                var city = ip.value;
+
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+                fetch(url).then(rs=>rs.json())
+                .then(rs=>{
+                    document.getElementById("temp").innerText = rs.main.temp;
+                    document.getElementById("prec").innerText = rs.main.pressure;
+                    document.getElementById("humd").innerText = rs.main.humidity;
+                    document.getElementById("wind").innerText = rs.wind.speed;
+                    for(var i=0;i<rs.weather.length;i++){
+                        var icon = rs.weather[i].icon;
+                        document.getElementById("icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+</html>
