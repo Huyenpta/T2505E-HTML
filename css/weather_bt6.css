@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #222;
+    /* Nền đen */
+    color: #fff;
+    /* Chữ trắng */
+}
+
+.weather-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-container {
+    text-align: center;
+}
+
+input#city {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.weather-content img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-content h2 {
+    font-size: 64px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.weather-details {
+    text-align: left;
+    font-size: 18px;
+}

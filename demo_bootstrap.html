@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.css"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 bg-danger">Co màn hình 1</div><!--Cho màn hình cỡ lớn-->
+                <div class="col-xl-3 col-lg-4 col-md-6 bg-info">Co màn hình 2</div><!--Màn hình Tablet-->
+                <div class="col-xl-3 col-lg-4 col-md-6 bg-warning">Co màn hình 3</div><!--Màn hình điện thoại-->
+                <div class="col-xl-3 col-lg-4 col-md-6 bg-primary">Co màn hình 4</div>
+            </div>
+            </br>
+            <div class="row"><!--độ cao linh động theo dòng bên trong, tối đa là 12: 6, 4, 3-->
+                <div class="col-3 bg-primary">AAAA</div><!--Con số tối đa 12 trên 1 dòng, màu xanh da trời-->
+                <div class="col-3 bg-warning">BBBB</div><!--Màu vàng-->
+                <div class="col-3 bg-info">CCCC</div><!--Màu xanh ngọc-->
+                <div class="col-3 bg-danger">DDDD</div><!--Màu xanh ngọc-->
+            </div>
+            <div class="row">
+                <!--độ cao linh động theo dòng bên trong, xoá số đi sẽ tự động chia theo phần % số lượng con bên trong-->
+                <div class="col bg-primary">AAAA</div><!--Con số tối đa 12 trên 1 dòng, màu xanh da trời-->
+                <div class="col bg-warning">BBBB</div><!--Màu vàng-->
+                <div class="col bg-info">CCCC</div><!--Màu xanh ngọc-->
+                <div class="col bg-primary">AAAA</div><!--Con số tối đa 12 trên 1 dòng, màu xanh da trời-->
+                <div class="col bg-warning">BBBB</div><!--Màu vàng-->
+                <div class="col bg-info">CCCC</div><!--Màu xanh ngọc-->
+            </div>
+            <div class="row">
+                <div class="col bg-info">AAAA</div>
+                <div class="col bg-danger">BBBB</div>
+                <div class="col-7 bg-info">BBBB</div>
+                <div class="col-2 bg-primary">CCCCC</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1>Login form</h1>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Recipient’s username"
+                                    aria-label="Recipient’s username" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2">@example.com</span>
+                            </div>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Telephone</th>
+                        </thead>
+                        <body>
+                            <tr>
+                                <td>#1</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>a@gmail.com</td>
+                                <td>098752243</td>
+                            </tr>
+                            <tr>
+                                <td>#2</td>
+                                <td>Nguyễn Văn B</td>
+                                <td>b@gmail.com</td>
+                                <td>088752243</td>
+                            </tr>
+                        </body>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

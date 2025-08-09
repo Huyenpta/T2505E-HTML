@@ -1,0 +1,17 @@
+body{
+    background-image: url("../images/bautroi.webp");
+    font-family: sans-serif;
+    font-size: 14px;
+    background-size:cover ;
+}
+.item{
+    background-color: #00000040;
+    height: 150px;
+}
+.item h3{
+    font-size: 0.9rem;
+}
+
+.item img{
+    transform: translate(150px, -100px);
+}
