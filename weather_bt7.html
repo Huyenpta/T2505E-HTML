@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/weather_bt7.css">
+</head>
+
+<body>
+    <main class="weather-section">
+        <div class="weather-grid" id="weatherList"></div>
+    </main>
+
+    <script>
+        function searchWeather() {
+            const url = `https://api.openweathermap.org/data/2.5/forecast?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById("weatherList");
+                    container.innerHTML = "";
+
+                    data.list.forEach(item => {
+                        const time = item.dt_txt; // thời gian dạng chuỗi
+                        const temp = item.main.temp.toFixed(2);
+                        const icon = item.weather[0].icon;
+                        const desc = item.weather[0].description;
+
+                        const card = `
+                                        <div class="weather-card">
+                                            <p class="time">${time}</p>
+                                            <h2>${temp}°C</h2>
+                                            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+                                            <p>${desc}</p>
+                                        </div>
+                        `;
+                        container.innerHTML += card;
+                    });
+                })
+                .catch(err => console.error(err));
+        }
+
+        searchWeather();
+    </script>
+</body>
+
+</html>

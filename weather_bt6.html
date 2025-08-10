@@ -13,10 +13,9 @@
 	<link rel="stylesheet" href="css/weather_bt6.css">
 </head>
 
-<body>
+<body onload="searchWeather()">
 	<main class="weather-section">
 		<div class="weather-container">
-			<input type="text" id="city" placeholder="Nhập tên thành phố" onkeypress="searchWeather(event)" />
 			<div class="weather-content">
 				<img src="https://openweathermap.org/img/wn/02d@2x.png" id="icon" class="t" />
 				<h2 class="t"><span id="temp">33</span><sup><sup>o</sup>C | <sup>o</sup>F<sup></h2>
@@ -30,23 +29,27 @@
 	</main>
 	<script type="text/javascript">
 		function searchWeather() {
-			if (event.keyCode == 13) { // sự kiện bàn phím nhấn là phím enter 
-				var ip = document.getElementById("city");
-				var city = ip.value;
-				const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
-				fetch(url).then(rs => rs.json())
-					.then(rs => {
-						document.getElementById("temp").innerText = rs.main.temp;
-						document.getElementById("prec").innerText = rs.main.pressure;
-						document.getElementById("humd").innerText = rs.main.humidity;
-						document.getElementById("wind").innerText = rs.wind.speed;
-						for (var i = 0; i < rs.weather.length; i++) {
-							var icon = rs.weather[i].icon;
-							document.getElementById("icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-						}
-					})
-			};
-			searchWeather();
+			const url = `https://api.openweathermap.org/data/2.5/forecast?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric&lang=vi`;
+			fetch(url)
+				.then(res => res.json())
+				.then(data => {
+					const first = data.list[0]; // Lấy dự báo gần nhất
+					// Nhiệt độ
+					document.getElementById("temp").innerText = first.main.temp;
+					// Độ ẩm
+					document.getElementById("humd").innerText = first.main.humidity;
+					// Tốc độ gió
+					document.getElementById("wind").innerText = first.wind.speed;
+
+					// Xác suất mưa (%)
+					const pop = first.pop ? Math.round(first.pop * 100) : 0;
+					document.getElementById("prec").innerText = pop;
+
+					// Icon
+					const icon = first.weather[0].icon;
+					document.getElementById("icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+				})
+				.catch(err => console.error(err));
 		}
 	</script>
 </body>
