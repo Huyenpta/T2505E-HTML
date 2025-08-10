@@ -81,3 +81,7 @@ body {
     box-sizing: border-box;
     border: 0px solid gray;
 }
+
+.page{
+    text-align: center;
+}
