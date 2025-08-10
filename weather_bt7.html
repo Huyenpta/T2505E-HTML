@@ -36,8 +36,10 @@
                         const card = `
                                         <div class="weather-card">
                                             <p class="time">${time}</p>
-                                            <h2>${temp}°C</h2>
-                                            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+                                            <div class="temp-row">
+                                                <h2>${temp}°C</h2>
+                                                <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+                                            </div>
                                             <p>${desc}</p>
                                         </div>
                         `;
