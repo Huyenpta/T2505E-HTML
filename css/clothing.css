@@ -79,7 +79,7 @@ body {
     padding: 16px;
     width: 40%;
     box-sizing: border-box;
-    border: 0px solid gray;
+    border: 0px;
 }
 
 .page{
